@@ -6,6 +6,10 @@ public class RestaurantService {
     private static List<Restaurant> restaurants = new ArrayList<>();
 
     public Restaurant findRestaurantByName(String restaurantName){
+        for(Restaurant Rsnt: restaurants) {
+            if(Rsnt.getName().equals(restaurantName))
+                return Rsnt;
+        }
         return null;
         //DELETE ABOVE STATEMENT AND WRITE CODE HERE
     }
@@ -24,6 +28,10 @@ public class RestaurantService {
     }
 
     public List<Restaurant> getRestaurants() {
-        return restaurants;
+        addRestaurant("Chio Cafe","Chenai",LocalTime.parse("10:00:00"), LocalTime.parse("22:00:00"));
+        addRestaurant("Bristo Cafe","Madrash",LocalTime.parse("10:00:00"), LocalTime.parse("22:00:00"));
+        addRestaurant("Anjarappan","Pan India",LocalTime.parse("07:00:00"), LocalTime.parse("23:00:00"));
+        addRestaurant("Mainland China","India",LocalTime.parse("00:00:00"), LocalTime.parse("23:59:00"));
+        return this.restaurants;
     }
 }

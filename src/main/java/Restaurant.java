@@ -25,7 +25,17 @@ public class Restaurant {
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
-        return null;
+        //return null
+        addToMenu("Chicken Samosa",10);
+        addToMenu("Veg Samosa",5);
+        addToMenu("Veg Pakkora",5);
+        addToMenu("Omlet",10);
+        addToMenu("Chicken Biriany",100);
+        addToMenu("Mutton Biriany",150);
+        addToMenu("Veg Biriany",95);
+        addToMenu("Plain Nan",5);
+        addToMenu("Butter Nan",7);
+        return this.menu;
         //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
 
